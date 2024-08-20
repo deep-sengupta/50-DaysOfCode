@@ -1,0 +1,9 @@
+https://quotes.toscrape.com/
+https://books.toscrape.com/
+https://www.wikipedia.org/
+https://news.ycombinator.com/
+https://www.imdb.com/chart/top/
+https://www.bbc.com/news
+https://www.reddit.com/
+https://www.nytimes.com/
+https://www.techcrunch.com/

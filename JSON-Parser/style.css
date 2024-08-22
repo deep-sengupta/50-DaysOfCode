@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #04d480;
+    padding: 20px;
+}
+.heading{
+    font-size: 3em;
+    opacity: 0.4;
+    margin-bottom: 20px;
+}
+.json-container{
+    width: 600px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+textarea{
+    width: 100%;
+    height: 200px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    resize: none;
+    overflow: scroll;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+    margin-bottom: 10px;
+}
+textarea:hover{
+    transform: scale(1.02);
+}
+#jsonViewer{
+    width: 100%;
+    height: 250px;
+    line-height: 1.5;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 10px;
+    overflow: scroll;
+    font-size: 14px;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+    margin-bottom: 10px;
+}
+#jsonViewer:hover{
+    transform: scale(1.02);
+}
+.buttons{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+button, input[type=file]::file-selector-button{
+    background-color: #05995d;
+    color: #fff;
+    border: none;
+    padding: 8px 14px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+button:hover, input[type=file]::file-selector-button:hover{
+    background-color: #026e42;
+    transform: scale(1.05);
+}
+.collapsible{
+    cursor: pointer;
+    position: relative;
+    padding-left: 20px;
+}
+.collapsible::before{
+    content: '▶';
+    color: #555;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 14px;
+    line-height: 1;
+    padding-right: 5px;
+}
+.collapsible.collapsed::before{
+    content: '▼';
+}
+.hidden{
+    display: none;
+}
+.key{
+    color: #0366d6;
+    font-weight: bold;
+}
+.string{
+    color: #22863a;
+}
+.number{
+    color: #032f62;
+}
+.object, .array{
+    margin-left: 15px;
+}
+.unknown{
+    color: #555;
+}
+
+@media screen and (max-width: 600px){
+    .json-container{
+        width: 100%;
+    }
+}

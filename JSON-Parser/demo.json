@@ -1,0 +1,30 @@
+{
+    "contacts": [
+        {
+            "firstName": "Ava",
+            "surname": "Walker",
+            "sex": "female",
+            "years": 29,
+            "contact": "3216549870"
+        },
+        {
+            "firstName": "Liam",
+            "surname": "Garcia",
+            "sex": "male",
+            "years": 34,
+            "contact": [
+                {
+                    "mobile": 30,
+                    "landline": 45
+                }
+            ]
+        },
+        {
+            "firstName": "Sophia",
+            "surname": "Martinez",
+            "sex": "female",
+            "years": 26,
+            "contact": "6543217890"
+        }
+    ]
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>JSON Parser</title>
+
+</head>
+<body>
+
+    <h1 class="heading">JSON Parser</h1>
+    <div class="json-container">
+        <textarea id="jsonInput" cols="30" rows="10" placeholder="Paste your JSON here..."></textarea>
+        <div id="jsonViewer"></div>
+        
+        <div class="buttons">
+            <button onclick="parseAndDisplayJson()">Parse JSON</button>
+            <input type="file" id="fileInput" accept=".json, .txt">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

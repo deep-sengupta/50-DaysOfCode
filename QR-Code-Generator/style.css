@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #2c3e50;
+    padding: 20px;
+}
+.container{
+    display: flex;
+    background: #ecf0f1;
+    border-radius: 7px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 800px;
+    width: 100%;
+    transition: height 0.2s ease;
+}
+.form-section, .code-section{
+    padding: 30px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.form-section{
+    background: #34495e;
+    color: #fff;
+}
+header h1{
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+header p{
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #bdc3c7;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+}
+.form input{
+    padding: 12px;
+    font-size: 18px;
+    border-radius: 5px;
+    border: 1px solid #999;
+    margin-bottom: 20px;
+    background: #fff;
+    color: #333;
+}
+.form button{
+    padding: 15px;
+    font-size: 18px;
+    border-radius: 5px;
+    background: #3498db;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    transition: background 0.3s;
+}
+.form button:hover{
+    background: #2980b9;
+}
+.code-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+}
+.code{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    min-height: 200px;
+    opacity: 0;
+    pointer-events: none;
+}
+.start.active .code{
+    opacity: 1;
+    pointer-events: auto;
+    transition: opacity 0.5s 0.05s ease;
+}
+
+@media (max-width: 768px){
+    .container{
+        flex-direction: column;
+        max-width: 100%;
+        padding: 15px;
+    }
+    .form-section, .code-section{
+        padding: 20px;
+    }
+    .code{
+        min-height: 150px;
+    }
+}
+
+@media (max-width: 480px){
+    header h1{
+        font-size: 20px;
+    }
+    header p{
+        font-size: 14px;
+    }
+    .form input, .form button{
+        font-size: 16px;
+        padding: 10px;
+    }
+    .code{
+        padding: 15px;
+    }
+}

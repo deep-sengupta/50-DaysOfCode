@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+html{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    font-size: 12px;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+.background-container{
+    position: fixed;
+    width: 200%;
+    height: 200%;
+    top: -50%;
+    left: -50%;
+    z-index: -1;
+}
+.background-container img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    filter: blur(15px);
+    transform: scale(1.1);
+}
+.audio-player-container{
+    display: flex;
+    background-color: #E7E7E7;
+    height: 500px;
+    width: 800px;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    transition: all 0.5s ease;
+    overflow: hidden;
+}
+.audio-player-container:hover{
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
+}
+.audio-player{
+    width: 50%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.album-art-container{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.album-art-container img{
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 5px 30px 5px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transform: scale(0.9);
+    transition: all 0.5s ease;
+}
+.album-art-container img.active-album-art{
+    opacity: 1;
+    transform: scale(1);
+}
+.track-title{
+    font-size: 43px;
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0 0;
+}
+.track-artist{
+    font-size: 18px;
+    font-weight: 500;
+    margin: 10px 0;
+}
+.seek-bar{
+    background-color: #fff;
+    border-radius: 5px;
+    height: 6px;
+    width: 90%;
+    cursor: pointer;
+    margin: 40px 20px 35px;
+}
+.seek-progress{
+    background-color: #212121;
+    border-radius: 5px;
+    height: 100%;
+    width: 0%;
+    transition: width 0.1s linear;
+}
+.time-display{
+    position: relative;
+    top: -25px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.player-controls{
+    position: relative;
+    top: -15px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.fa-solid{
+    font-size: 40px;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    user-select: none;
+}
+.fa-solid:hover{
+    filter: brightness(40%);
+}
+.play-toggle-button{
+    font-size: 65px;
+}

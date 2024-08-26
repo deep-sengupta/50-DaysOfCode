@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Music Player</title>
+
+</head>
+<body>
+
+    <div class="background-container">
+        <img src="" alt="background-image" id="background-image">
+    </div>
+
+    <div class="audio-player-container">
+        <div class="audio-player">
+            <h2 class="track-title" id="track-title"></h2>
+            <h3 class="track-artist" id="track-artist"></h3>
+
+            <div class="seek-bar" id="seek-bar">
+                <div class="seek-progress" id="seek-progress"></div>
+                <div class="time-display">
+                    <span id="current-time-display">0:00</span>
+                    <span id="total-time-display">0:00</span>
+                </div>
+            </div>
+
+            <div class="player-controls">
+                <i class="fa-solid fa-backward-step" title="Previous" id="previous-button"></i>
+                <i class="fa-solid fa-circle-play play-toggle-button" title="Play" id="play-toggle-button"></i>
+                <i class="fa-solid fa-forward-step" title="Next" id="next-button"></i>
+            </div>
+        </div>
+        <div class="album-art-container">
+            <img src="" class="active-album-art" id="album-art">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

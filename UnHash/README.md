@@ -9,9 +9,13 @@ UnHash is a Python-based hash cracking tool that supports multiple hashing algor
 - `Simple Interface`: Easy to use, with clear prompts for user input.
 
 ## Usage
+- Install the Required Python Packages:
+```
+pip3 install pyfiglet
+```
 - Run the script:
 ```
-python unhash.py
+python3 unhash.py
 ```
 - Enter the hash type: `MD5` `SHA1` `SHA224` `SHA384` `SHA512`
 - Provide the wordlist location: `/path/to/wordlist.txt`
@@ -19,7 +23,7 @@ python unhash.py
 
 ### Example
 ```
-python unhash.py
+python3 unhash.py
 
 Algorithms available: MD5 | SHA1 | SHA224 | SHA512 | SHA384
 Enter the hash type: MD5

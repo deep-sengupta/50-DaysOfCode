@@ -1,0 +1,15 @@
+{
+    "name": "Email Scraper Chrome Extension",
+    "description": "Scrape emails from any website",
+    "version": "1.0",
+    "manifest_version": 3,
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "permissions": ["activeTab", "scripting"],
+    "icons": {
+        "16": "/icons/icons16.png",
+        "48": "/icons/icons48.png",
+        "128": "/icons/icons128.png"
+    }
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <title>Login SignUp Form</title>
+
+</head>
+<body>
+
+    <section class="auth-wrapper">
+        <div class="auth-card login-card">
+            <div class="auth-header">Login</div>
+            <form action="#" class="auth-form">
+                <div class="auth-field">
+                    <input type="email" placeholder="Email" class="auth-input">
+                </div>
+                <div class="auth-field">
+                    <input type="password" placeholder="Password" class="auth-password">
+                    <i class='bx bx-hide toggle-visibility'></i>
+                </div>
+                <div class="auth-actions">
+                    <a href="#" class="reset-password">Forgot password?</a>
+                </div>
+                <div class="auth-button-group">
+                    <button class="auth-submit">Login</button>
+                </div>
+            </form>
+            <div class="auth-footer center-align">
+                <span>Don't have an account? <a href="#" class="switch-auth switch-to-signup">Signup</a></span>
+            </div>
+            <div class="separator"></div>
+            <div class="social-login">
+                <a href="#" class="social-button facebook-button">
+                    <i class='bx bxl-facebook facebook-icon'></i>
+                    <span>Login with Facebook</span>
+                </a>
+                <a href="#" class="social-button google-button">
+                    <img src="/login-signup-form/images/google.svg" alt="Google Logo" class="google-icon">
+                    <span>Login with Google</span>
+                </a>
+            </div>
+        </div>
+
+
+        <div class="auth-card signup-card">
+            <div class="auth-header">Signup</div>
+            <form action="#" class="auth-form">
+                <div class="auth-field">
+                    <input type="name" placeholder="Name" class="auth-input">
+                </div>
+                <div class="auth-field">
+                    <input type="email" placeholder="Email" class="auth-input">
+                </div>
+                <div class="auth-field">
+                    <input type="password" placeholder="Create password" class="auth-password">
+                </div>
+                <div class="auth-field">
+                    <input type="password" placeholder="Confirm password" class="auth-password">
+                    <i class='bx bx-hide toggle-visibility'></i>
+                </div>
+                <div class="auth-button-group">
+                    <button class="auth-submit">Signup</button>
+                </div>
+            </form>
+            <div class="auth-footer center-align">
+                <span>Already have an account? <a href="#" class="switch-auth switch-to-login">Login</a></span>
+            </div>
+            <div class="separator"></div>
+            <div class="social-login">
+                <a href="#" class="social-button facebook-button">
+                    <i class='bx bxl-facebook facebook-icon'></i>
+                    <span>Signup with Facebook</span>
+                </a>
+                <a href="#" class="social-button google-button">
+                    <img src="/login-signup-form/images/google.svg" alt="Google Logo" class="google-icon">
+                    <span>Signup with Google</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

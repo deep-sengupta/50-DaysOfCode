@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toast Notification</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+
+</head>
+<body>
+
+    <div class="buttons">
+        <button class="success" onclick="showToast(successMsg)">Success</button>
+        <button class="error" onclick="showToast(errorMsg)">Error</button>
+        <button class="invalid" onclick="showToast(invalidMsg)">Invalid</button>
+        <button class="info" onclick="showToast(infoMsg)">Info</button>
+    </div>
+    <div id="toastBox"></div>
+
+    <script src="script.js" defer></script>
+
+</body>
+</html>

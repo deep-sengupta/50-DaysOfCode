@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Email Validator</title>
+
+</head>
+<body>
+
+    <main>
+        <section class="form-container">
+            <h1>Email Validation Tool</h1>
+            <form action="/submit" method="post">
+                <input type="text" id="emailInput" name="email" placeholder="Enter your email" required>
+                <input id="validateBtn" class="button" type="submit" value="Validate">
+            </form>
+        </section>
+        <section class="output-section">
+            <h2>Validation Results</h2>
+            <div id="outputResult"></div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

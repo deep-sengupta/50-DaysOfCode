@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.footer{
+    margin-top: auto;
+    width: 100%;
+    background: #1d1d1d;
+    color: #ffffff;
+    padding: 50px 20px 0;
+}
+.footer .row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-bottom: 1px solid #333;
+    padding-bottom: 30px; 
+}
+.row .col h4{
+    color: #fff;
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+.col .links{
+    margin-top: 10px;
+}
+.col .links li{
+    list-style: none;
+    margin-bottom: 8px;
+}
+.col .links li a{
+    text-decoration: none;
+    color: #b0b0b0;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+.col .links li a:hover{
+    color: #61dafb;
+}
+.col p{
+    margin: 15px 0;
+    color: #aaa;
+    max-width: 300px;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+.col .icons{
+    display: flex;
+    margin-top: 20px;
+    gap: 20px;
+}
+.col .icons i{
+    color: #aaa;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+.col .icons i:hover{
+    color: #61dafb;
+}
+.bottom{
+    text-align: center;
+    padding: 10px 0 20px;
+    margin-top: 10px;
+}
+.bottom p{
+    color: #777;
+    font-size: 1rem;
+}
+
+@media (max-width: 768px){
+    .footer{
+        width: 100%;
+        padding: 20px 0;
+    }
+    .footer .row{
+        padding: 20px;
+        gap: 1.5rem;
+    }
+    .col form{
+        display: block;
+    }
+    .col form :where(input, button){
+        width: 100%;
+    }
+    .col form button{
+        margin: 10px 0 0 0;
+    }
+    .bottom{
+        padding: 10px 0 10px;
+    }
+}

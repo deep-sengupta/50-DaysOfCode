@@ -1,0 +1,91 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #292929;
+}
+.wrapper{
+    height: 160px;
+    width: 160px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    perspective: 350;
+    -webkit-perspective: 350;
+}
+.box1, .box2, .box3, .box4{
+    background-color: #fff;
+    height: 76px;
+    width: 76px;
+    border-radius: 5px;
+    position: relative;
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    transition: 2s all ease-in;
+}
+.box1{
+    top: 80px;
+    left: 80px;
+}
+.box2{
+    bottom: 80px;
+    animation: fold2 5s infinite;
+    transform-origin: bottom;
+}
+.box3{
+    right: 80px;
+    animation: fold1 5s infinite;
+    transform-origin: right;
+}
+.box4{
+    top: 80px;
+    animation: fold 5s infinite;
+    transform-origin: top;
+}
+
+@keyframes fold{
+    0%{
+        transform: rotateX(0deg);
+    }
+    10%{
+        transform: rotateX(-180deg) translateY(4px);
+    }
+    70%{
+        transform: rotateX(-180deg) translateY(4px);
+    }
+    80%{
+        transform: rotateX(0deg);
+    }
+}
+
+@keyframes fold1{
+    10%{
+        transform: rotateY(0deg);
+    }
+    20%{
+        transform: rotateY(-180deg) translateX(-4px);
+    }
+    60%{
+        transform: rotateY(-180deg) translateX(-4px);
+    }
+    70%{
+        transform: rotateY(0deg);
+    }
+}
+
+@keyframes fold2{
+    20%{
+        transform: rotateX(0deg);
+    }
+    30%{
+        transform: rotateX(180deg) translateY(4px);
+    }
+    50%{
+        transform: rotateX(180deg) translateY(4px);
+    }
+    60%{
+        transform: rotateX(0deg);
+    }
+}

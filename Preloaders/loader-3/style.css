@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+section{
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    background: #fff;
+    align-items: center;
+    justify-content: center;
+}
+.loader{
+    height: 60px;
+    width: 60px;
+    position: relative;
+    animation: rotate 2s linear infinite;
+}
+.ball{
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+}
+.upper{
+    left: 15px;
+    top: -40px;
+    background: #ff6347;
+    animation: upper 1.5s ease-in-out infinite;
+}
+
+@keyframes upper{
+    50%{
+        top: 40px;
+    }
+    100%{
+        top: -40px;
+    }
+}
+.right{
+    right: -40px;
+    top: 15px;
+    background: #1e90ff;
+    animation: right 1.5s ease-in-out infinite;
+}
+
+@keyframes right{
+    50%{
+        right: 40px;
+    }
+    100%{
+        right: -40px;
+    }
+}
+.lower{
+    bottom: -40px;
+    left: 15px;
+    background: #32cd32;
+    animation: lower 1.5s ease-in-out infinite;
+}
+
+@keyframes lower{
+    50%{
+        bottom: 40px;
+    }
+    100%{
+        bottom: -40px;
+    }
+}
+.left{
+    left: -40px;
+    top: 15px;
+    background: #ffa500;
+    animation: left 1.5s ease-in-out infinite;
+}
+
+@keyframes left{
+    50%{
+        left: 40px;
+    }
+    100%{
+        left: -40px;
+    }
+}

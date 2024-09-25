@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Quicksand', sans-serif;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    background-color: #2b2c34;
+}
+h1{
+    font-size: 3rem;
+    color: #eaeaea;
+    position: absolute;
+    left: 50%;
+    top: 25%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    animation: fadeIn 1.5s ease-out;
+}
+.button{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%);
+    text-decoration: none;
+    color: #eaeaea;
+    border: #eaeaea solid 0.2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    width: 12rem;
+    padding: 1.2rem;
+    background-color: transparent;
+    transition: background-color 0.4s ease;
+}
+.left .button:hover{
+    background-color: #fff;
+    border-color: #fff;
+    color: #000;
+}
+.right .button:hover{
+    background-color: #fff;
+    border-color: #fff;
+    color: #000;
+}
+.wrapper{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.side{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+}
+.left{
+    left: 0;
+    background: url('pubg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.left::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(68, 76, 86, 0.7);
+    animation: slideInLeft 1s ease;
+}
+.right{
+    right: 0;
+    background: url('freefire.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.right::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(85, 107, 120, 0.7);
+    animation: slideInRight 1s ease;
+}
+.left,
+.right,
+.left::before,
+.right::before{
+    transition: all 1000ms ease-in-out;
+}
+.hover-left .left{
+    width: 75%;
+}
+.hover-left .right{
+    width: 25%;
+}
+.hover-right .right{
+    width: 75%;
+}
+.hover-right .left{
+    width: 25%;
+}
+
+@media (max-width: 1000px){
+    h1{
+        font-size: 2.5rem;
+        top: 20%;
+    }
+    .button{
+        top: 45%;
+        padding: 1rem;
+        width: 10rem;
+    }
+}
+
+@media (max-width: 800px){
+    .wrapper{
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+    .side{
+        width: 100%;
+        height: 50%;
+        position: relative;
+    }
+    h1{
+        font-size: 2rem;
+        top: 15%;
+    }
+    .button{
+        top: 50%;
+        padding: 0.8rem;
+        width: 9rem;
+    }
+    .hover-left .left, 
+    .hover-left .right, 
+    .hover-right .left, 
+    .hover-right .right{
+        width: 100%;
+    }
+}
+
+@keyframes slideInLeft{
+    0%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight{
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeIn{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}

@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #f4f7fa;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    padding: 20px;
+}
+img{
+    max-width: 100%;
+}
+.info-card{
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+    width: 100%;
+    max-width: 400px;
+    background-color: white;
+}
+.info-header{
+    height: 220px;
+}
+.info-header img{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    border-bottom: 1px solid #e1e5ea;
+}
+.info-body{
+    padding: 20px;
+}
+.info-title{
+    font-size: 1.4rem;
+    color: #333;
+    margin-bottom: 15px;
+    height: 24px;
+}
+.info-description{
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+.info-author{
+    display: flex;
+    align-items: center;
+}
+.author-avatar{
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    overflow: hidden;
+}
+.author-details{
+    margin-left: 15px;
+}
+.author-details strong{
+    font-size: 1.1rem;
+    color: #333;
+}
+.author-details small{
+    color: #999;
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+.loading-bg{
+    background-image: linear-gradient(to right, #f0f0f0 0%, #e0e0e0 50%, #f0f0f0 100%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+}
+.loading-text{
+    border-radius: 8px;
+    display: inline-block;
+    margin: 5px 0;
+    height: 16px;
+    width: 100%;
+}
+
+@keyframes shimmer{
+    0%{
+        background-position: -200% 0;
+    }
+    100%{
+        background-position: 200% 0;
+    }
+}
+
+@media (max-width: 768px){
+    .info-card{
+        max-width: 100%;
+    }
+    .info-body{
+        padding: 15px;
+    }
+    .info-title{
+        font-size: 1.2rem;
+        height: auto;
+    }
+    .info-description{
+        font-size: 0.9rem;
+    }
+    .author-avatar{
+        height: 40px;
+        width: 40px;
+    }
+    .author-details strong{
+        font-size: 1rem;
+    }
+}

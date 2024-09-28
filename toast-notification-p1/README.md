@@ -1,7 +1,7 @@
 <div align="center">
 
 # Online & Offline Toast Notification
-![Toast-Animation](https://github.com/user-attachments/assets/98387bd6-c88a-4a93-bc45-d975e124ad3e)</div>
+![Toast-Animation](https://github.com/user-attachments/assets/daa6f5a0-2de3-4828-b5dc-da35df93e45b)</div>
 
 ### Features:
 - `Toast Notifications`: Displays a toast message when the user goes online or offline.

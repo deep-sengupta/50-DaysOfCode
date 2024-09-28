@@ -1,7 +1,7 @@
 <div align="center">
 
 # Toast Notification (Part 2)
-<img src="https://github.com/user-attachments/assets/5c52e823-7dcf-4f6b-9a91-bcc69922cb12" width="310" height="320"></div>
+<img src="https://github.com/user-attachments/assets/b7cb120c-9f85-419d-a91a-e6882783cdc7" width="310" height="320"></div>
 
 ### Features
 - Four types of notifications: Success, Error, Invalid, and Info.

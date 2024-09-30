@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #f0f4f8;
+    font-family: "Montserrat", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+.panel-container{
+    background-color: #ffffff;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    text-align: center;
+    padding: 40px;
+    max-width: 400px;
+    width: 100%;
+    animation: fade-scale-in 1s ease-out;
+}
+
+@keyframes fade-scale-in{
+    0%{
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+h2{
+    font-size: 1.5em;
+    color: #333;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.ratings-container{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+.rating{
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    padding: 10px;
+    border-radius: 8px;
+    flex: 1;
+}
+.rating:hover{
+    transform: scale(1.1);
+    background-color: rgba(0, 0, 0, 0.05);
+}
+.rating img{
+    width: 50px;
+}
+.rating small{
+    display: block;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #555;
+}
+.rating.active{
+    background-color: #e0f7fa;
+}
+.rating.active small{
+    color: #111;
+}
+.btn{
+    background-color: #0288d1;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    padding: 12px 40px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.btn:disabled{
+    background-color: #ddd;
+    cursor: not-allowed;
+}
+.btn:hover:not(:disabled){
+    background-color: #0277bd;
+}
+.thank-you{
+    animation: fade-in 0.8s ease-out;
+}
+.heart-gif{
+    width: 60px;
+    display: block;
+    margin: 0 auto 15px auto;
+}
+
+@keyframes fade-in{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px){
+    .panel-container{
+        max-width: 320px;
+        padding: 30px;
+    }
+    h2{
+        font-size: 1.5em;
+    }
+    .btn{
+        padding: 10px 30px;
+        font-size: 14px;
+    }
+    .rating img{
+        width: 40px;
+    }
+    .rating small{
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px){
+    .panel-container{
+        max-width: 100%;
+        padding: 20px;
+    }
+    h2{
+        font-size: 1.3em;
+    }
+    .btn{
+        padding: 8px 25px;
+        font-size: 12px;
+    }
+    .rating img{
+        width: 35px;
+    }
+    .rating small{
+        font-size: 11px;
+    }
+}

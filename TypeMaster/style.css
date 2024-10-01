@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root{
+    --primary-dark: #1e272e;
+    --secondary-dark: #2f3640;
+    --highlight-color: #f39c12;
+    --text-light: #f5f6fa;
+    --border-radius: 8px;
+    --box-shadow-color: rgba(0, 0, 0, 0.2);
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: var(--primary-dark);
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+.container{
+    background-color: var(--secondary-dark);
+    padding: 30px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 8px var(--box-shadow-color);
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    color: var(--text-light);
+}
+h2{
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--highlight-color);
+    margin-bottom: 20px;
+}
+small{
+    font-size: 16px;
+    color: var(--highlight-color);
+    margin-bottom: 20px;
+    display: block;
+}
+h1{
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.input-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 5px;
+}
+input{
+    width: 75%;
+    padding: 16px 18px;
+    font-size: 18px;
+    border: 1px solid var(--highlight-color);
+    border-radius: var(--border-radius);
+    outline: none;
+    transition: all 0.3s ease;
+    background-color: var(--primary-dark);
+    color: var(--text-light);
+}
+input:focus{
+    border-color: var(--highlight-color);
+}
+button{
+    background-color: var(--highlight-color);
+    color: #fff;
+    border: none;
+    padding: 16px 15px;
+    width: 20%;
+    font-size: 18px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+button:hover{
+    background-color: #d35400;
+}
+.time-container{
+    font-size: 18px;
+    color: var(--highlight-color);
+    margin-bottom: 20px;
+}
+.status-container{
+    display: flex;
+    justify-content: space-between;
+}
+.score-container, .high-score-container{
+    font-size: 16px;
+    color: var(--text-light);
+}
+.end-game-container{
+    background-color: rgba(0, 0, 0, 0.85);
+    border-radius: var(--border-radius);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    color: var(--highlight-color);
+    padding: 20px;
+    box-shadow: 0 4px 8px var(--box-shadow-color);
+    animation: fadeIn 0.5s ease-in-out forwards;
+    opacity: 0;
+}
+
+@keyframes fadeIn{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}

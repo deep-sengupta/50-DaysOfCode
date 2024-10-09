@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+:root{
+    --primary-color: #222;
+    --secondary-color: #0066cc;
+    --light-color: #f4f4f4;
+    --overlay-color: rgba(0, 0, 0, 0.6);
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    color: var(--primary-color);
+    background-color: var(--light-color);
+}
+.navbar{
+    background: var(--primary-color);
+    padding: 1rem 0;
+}
+.navbar .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar h1{
+    color: #fff;
+    font-size: 2rem;
+}
+.navbar ul{
+    list-style: none;
+    display: flex;
+    margin: revert;
+}
+.navbar ul li{
+    margin-left: 2.5rem;
+}
+.navbar ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+.navbar ul li a:hover{
+    color: var(--secondary-color);
+}
+.section-showcase{
+    background-color: #fff;
+    padding: 4rem 0;
+}
+.container{
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 2rem;
+}
+.showcase-content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 2rem;
+}
+.text-box h1{
+    font-size: 3.5rem;
+    line-height: 1.3;
+    color: var(--primary-color);
+}
+.text-box p{
+    font-size: 1.2rem;
+    margin: 1.5rem 0;
+    color: #555;
+}
+.btn{
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+.btn-primary{
+    background-color: var(--secondary-color);
+    color: #fff;
+    border: none;
+    transition: background 0.3s ease;
+}
+.btn-primary:hover{
+    background-color: #004c99;
+}
+.image-box img{
+    width: 100%;
+    border-radius: 8px;
+}
+.section-about{
+    background: var(--primary-color);
+    color: #fff;
+    padding: 3rem 0;
+    text-align: center;
+}
+.section-about h3{
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+.section-about h2{
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+.section-about p{
+    max-width: 800px;
+    margin: auto;
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px){
+    .showcase-content{
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .section-showcase{
+        padding: 2rem 0;
+    }
+    .text-box h1{
+        font-size: 2.5rem;
+    }
+    .text-box p{
+        font-size: 1rem;
+    }
+    .section-about h2{
+        font-size: 2.5rem;
+    }
+    .section-about h3{
+        font-size: 1.5rem;
+    }
+    .section-about p{
+        font-size: 1rem;
+    }
+}

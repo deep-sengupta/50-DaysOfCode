@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #161616;
+    overflow: hidden;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.card{
+    width: 350px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+.headphone{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.headphone img{
+    width: 200px;
+    transition: all 0.5s ease;
+}
+.headphone img:hover{
+    transform: rotateZ(-20deg) scale(1.1);
+}
+.info{
+    text-align: center;
+}
+.info h1{
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+.info p{
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    color: #666;
+}
+.sizes{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+.sizes button{
+    background-color: #f8f9fa;
+    border: none;
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 0.7rem;
+    transition: background-color 0.3s ease;
+}
+.sizes button.active{
+    background-color: #08539c;
+    color: #fff;
+}
+.sizes button:hover{
+    background-color: #ddd;
+}
+.purchase button{
+    width: 100%;
+    padding: 0.8rem;
+    background-color: #f54642;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: 400;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.purchase button:hover{
+    background-color: #d43f3b;
+}
+
+@media screen and (min-width: 768px){
+    .card{
+        width: 450px;
+    }
+    .info h1{
+        font-size: 2rem;
+    }
+    .info p{
+        font-size: 1.1rem;
+    }
+}

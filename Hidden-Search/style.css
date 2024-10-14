@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: #161616;
+    font-family: "Roboto", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+.search{
+    position: relative;
+    height: 60px;
+    transition: all 0.4s ease;
+}
+.search .input{
+    background-color: #2c2c2c;
+    border: 1px solid #555;
+    color: #fff;
+    font-size: 22px;
+    padding: 18px;
+    height: 60px;
+    width: 60px;
+    transition: width 0.5s ease, background-color 0.4s ease, border-radius 0.4s ease;
+    border-radius: 30px;
+}
+.search .input::placeholder{
+    color: #bbb;
+}
+.search .input:focus{
+    background-color: #333;
+}
+.btn{
+    background-color: #2c2c2c;
+    border: 1px solid #555;
+    color: #fff;
+    cursor: pointer;
+    font-size: 28px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 60px;
+    width: 60px;
+    transition: transform 0.5s ease, background-color 0.4s ease, border-radius 0.4s ease;
+    border-radius: 30px;
+}
+.btn:hover{
+    background-color: #555;
+}
+.btn i{
+    transition: transform 0.5s ease;
+}
+.search.active .btn i{
+    transform: rotate(180deg);
+}
+.btn:focus,
+.input:focus{
+    outline: none;
+}
+.search.active .input{
+    width: 280px;
+}
+.search.active .btn{
+    transform: translateX(240px);
+}

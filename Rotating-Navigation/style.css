@@ -1,0 +1,128 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: Arial, sans-serif;
+    background-color: #1e1f26;
+    color: #dfe6e9;
+    overflow: hidden;
+    height: 100vh;
+    padding: 20px;
+}
+.container{
+    background-color: #2f3640;
+    transform-origin: top left;
+    transition: transform 1s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    width: 100vw;
+    min-height: 100vh;
+    padding: 60px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+.container.show-nav{
+    transform: rotate(-15deg);
+}
+#toggle{
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    font-size: 32px;
+    color: #00a8ff;
+    cursor: pointer;
+    z-index: 100;
+    width: 50px;
+    height: 50px;
+    background-color: #2f3640;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+#toggle:hover{
+    background-color: #00a8ff;
+    color: #fff;
+}
+#open, #close{
+    position: absolute;
+    transition: opacity 0.5s ease-in-out;
+}
+#open{
+    opacity: 1;
+}
+#close{
+    opacity: 0;
+}
+.container.show-nav #open{
+    opacity: 0;
+}
+.container.show-nav #close{
+    opacity: 1;
+}
+nav{
+    position: fixed;
+    bottom: 50px;
+    left: 20px;
+    z-index: 100;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+.container.show-nav + nav{
+    opacity: 1;
+}
+nav ul{
+    list-style: none;
+    padding-left: 0;
+}
+nav ul li{
+    text-transform: uppercase;
+    color: #00a8ff;
+    margin: 20px 0;
+    transform: translateX(-100%);
+    transition: transform 1s ease-in-out, color 0.5s;
+    font-size: 18px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.container.show-nav + nav ul li{
+    transform: translateX(0);
+}
+nav ul li:hover{
+    color: #ffd32a;
+}
+.content{
+    max-width: 900px;
+    margin: 50px auto;
+    text-align: center;
+    animation: fadeInContent 1.5s ease;
+}
+.content h1{
+    font-size: 36px;
+    color: #ffd32a;
+}
+.content small{
+    color: #8c7ae6;
+    font-size: 14px;
+    display: block;
+    margin-top: 10px;
+    font-style: italic;
+}
+.content p{
+    color: #dcdde1;
+    line-height: 1.6;
+    margin-top: 20px;
+}
+
+@keyframes fadeInContent{
+    0%{
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

@@ -181,8 +181,66 @@
     width: 20px;
     height: 20px;
 }
+
 @media screen and (max-width: 400px){
     .auth-card {
         padding: 20px 10px;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .auth-wrapper{
+        flex-direction: column;
+        padding: 10px;
+    }
+    .auth-card{
+        max-width: 90%;
+        padding: 20px;
+    }
+    .social-login{
+        flex-direction: column;
+        gap: 5px;
+    }
+    .social-button{
+        font-size: 12px;
+        padding: 8px;
+    }
+}
+
+@media screen and (max-width: 480px){
+    .auth-header{
+        font-size: 22px;
+    }
+    .auth-input,
+    .auth-password,
+    .auth-submit{
+        font-size: 12px;
+        padding: 10px;
+    }
+    .toggle-visibility{
+        font-size: 16px;
+    }
+    .auth-footer span,
+    .auth-footer a{
+        font-size: 12px;
+    }
+    .separator::before{
+        font-size: 12px;
+    }
+    .facebook-icon,
+    .google-icon{
+        margin-right: 5px;
+    }
+}
+
+@media screen and (max-width: 320px){
+    .auth-card{
+        padding: 15px;
+    }
+    .auth-header{
+        font-size: 18px;
+    }
+    .auth-footer{
+        margin-top: 10px;
     }
 }
